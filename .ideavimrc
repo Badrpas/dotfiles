@@ -1,0 +1,79 @@
+
+set sneak
+set showmode
+set showcmd
+set smartcase
+
+set visualbell
+
+set scroll=8
+
+
+set scrolloff=7
+
+"set hlsearch
+"set incsearch
+set showmatch
+
+:set relativenumber
+:set number
+
+
+set clipboard+=unnamed
+set clipboard+=ideaput
+
+nnoremap <c--> :action SplitVertically<CR>
+nnoremap <c-=> :action Unsplit<CR>
+nnoremap <c-a-k> :action MoveEditorToOppositeTabGroup<CR>
+
+sethandler <c-j> a:vim
+sethandler <c-k> a:vim
+sethandler <c-h> a:vim
+sethandler <c-l> a:vim
+
+nnoremap \w <c-w>
+
+nnoremap <c-h> <c-w>h
+nnoremap <c-l> <c-w>l
+
+vnoremap <c-j> <c-[><c-w>h
+vnoremap <c-k> <c-[><c-w>l
+inoremap <c-j> <c-[><c-w>h
+inoremap <c-k> <c-[><c-w>l
+
+nnoremap <c-j> <c-w>h
+nnoremap <c-k> <c-w>l
+
+" Alternative to Ctrl+[
+inoremap <c-;> <c-[>
+vnoremap <a-m> <c-[>
+
+nnoremap J :action PreviousTab<CR>
+nnoremap K :action NextTab<CR>
+
+nnoremap gs :action GotoSuperMethod<CR>
+nnoremap gi :action GotoImplementation<CR>
+
+nnoremap \q :action CloseContent<CR>
+
+nnoremap \e :e ~\\.ideavimrc<CR>
+nnoremap \r :action IdeaVim.ReloadVimRc.reload<CR>
+
+nnoremap w [w
+vnoremap w ]w
+nnoremap b [b
+vnoremap b ]b
+
+
+nmap H <Action>(Back)
+nmap L <Action>(Forward)
+
+nnoremap x "_x
+nnoremap d "_d
+nnoremap D "_D
+vnoremap x d
+vnoremap d "_d
+
+vnoremap ( xi(<c-[>p
+vnoremap " xi"<c-[>p
+vnoremap ' xi'<c-[>p
